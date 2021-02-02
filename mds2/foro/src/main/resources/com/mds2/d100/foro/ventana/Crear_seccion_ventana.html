@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-horizontal-layout id="Margen superior" size-full _id="crear_seccion_sup" :middle :center :expand></vaadin-horizontal-layout>
+   <vaadin-vertical-layout primary-style-name="v-panel" spacing="false" id="Central" margin="false" _id="crear_seccion_mid" :middle :center>
+    <vaadin-panel primary-style-name="header-panel">
+     <vaadin-label primary-style-name="header-label" plain-text>
+       Crear una nueva seccion 
+     </vaadin-label>
+    </vaadin-panel>
+    <vaadin-vertical-layout :middle :center>
+     <vaadin-horizontal-layout width-full>
+      <vaadin-label width-full height="25px" plain-text :expand>
+        Nombre 
+      </vaadin-label>
+      <vaadin-label width-full plain-text :expand>
+        Visibilidad 
+      </vaadin-label>
+     </vaadin-horizontal-layout>
+     <vaadin-horizontal-layout width-full>
+      <vaadin-text-field size-full _id="text_crear_seccion_nombre" :expand></vaadin-text-field>
+      <vaadin-native-select empty-selection-allowed="false" id="Selector de visibilidad" size-full data-item-type="java.lang.String" _id="selector_crear_seccion_visibilidad" :expand>
+       <option item="Público">Público</option>
+       <option item="Privado">Privado</option>
+      </vaadin-native-select>
+     </vaadin-horizontal-layout>
+     <vaadin-label width-full plain-text>
+       Descripcion 
+     </vaadin-label>
+     <vaadin-text-area width-full _id="text_crear_seccion_descripcion"></vaadin-text-area>
+    </vaadin-vertical-layout>
+    <vaadin-horizontal-layout spacing="false" id="Buttonera" width-full :bottom :center>
+     <vaadin-button id="CancelButton" size-full plain-text _id="boton_crear_seccion_cancelar" :expand>
+       Cancelar 
+     </vaadin-button>
+     <vaadin-button id="AcceptButton" size-full plain-text _id="boton_crear_seccion_aceptar" :expand>
+       Crear 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+   <vaadin-horizontal-layout id="Margen inferior" size-full _id="crear_seccion_inf" :expand></vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

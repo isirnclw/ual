@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-horizontal-layout id="Margen superior" size-full _id="iniciar_sesion_superior" :middle :center :expand></vaadin-horizontal-layout>
+   <vaadin-vertical-layout primary-style-name="v-panel" spacing="false" id="Central" margin="false" _id="iniciar_sesion_mitad" :middle :center>
+    <vaadin-panel primary-style-name="header-panel" :middle :center :expand>
+     <vaadin-label primary-style-name="header-label" width-full plain-text>
+       Iniciar sesión 
+     </vaadin-label>
+    </vaadin-panel>
+    <vaadin-vertical-layout :middle :center :expand>
+     <vaadin-label width-full plain-text>
+       Usuario 
+     </vaadin-label>
+     <vaadin-text-field size-full _id="text_iniciar_sesion_usuario"></vaadin-text-field>
+     <vaadin-label width-full plain-text>
+       Contraseña 
+     </vaadin-label>
+     <vaadin-password-field size-full _id="text_iniciar_sesion_contraseña"></vaadin-password-field>
+    </vaadin-vertical-layout>
+    <vaadin-horizontal-layout spacing="false" id="Buttonera" width-full :expand>
+     <vaadin-button id="CancelButton" size-full plain-text _id="boton_recordar_contrasena" :expand>
+       Olvidé mi contraseña 
+     </vaadin-button>
+     <vaadin-button id="AcceptButton" size-full plain-text _id="boton_iniciar_sesion_entrar" :expand>
+       Entrar 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+   <vaadin-horizontal-layout id="Margen inferior" size-full _id="iniciar_sesion_inferior" :expand></vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

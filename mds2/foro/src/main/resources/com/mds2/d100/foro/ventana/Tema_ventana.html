@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-horizontal-layout spacing="false" id="Notificaciones" width-full height="58px">
+   <vaadin-label width="40px" plain-text _id="label_tema_icono" :middle :center>
+     [Icono] 
+   </vaadin-label>
+   <vaadin-vertical-layout spacing="false" size-full margin="false" :middle :expand>
+    <vaadin-label width-full plain-text _id="label_tema_nombre" :bottom :expand>
+      [Nombre] 
+    </vaadin-label>
+    <vaadin-label style-name="tiny" size-full plain-text _id="label_tema_descripcion" :expand>
+      [Descripcion] 
+    </vaadin-label>
+   </vaadin-vertical-layout>
+   <vaadin-horizontal-layout size-full :middle :right :expand>
+    <vaadin-label plain-text _id="label_tema_likes" :middle :right>
+      [Likes] 
+    </vaadin-label>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e6dc" enabled="false" style-name="borderless icon-only tiny" height="58px" plain-text></vaadin-button>
+    <vaadin-vertical-layout spacing="false" width="48px" height="50px" margin="false" :middle :center>
+     <vaadin-button icon="fonticon://Vaadin-Icons/e7d3" width="48px" height-full plain-text _id="boton_tema_modificar"></vaadin-button>
+     <vaadin-button icon="fonticon://Vaadin-Icons/e80b" width="48px" height-full plain-text _id="boton_tema_eliminar"></vaadin-button>
+    </vaadin-vertical-layout>
+    <vaadin-vertical-layout spacing="false" height="50px" margin="false" :middle :expand>
+     <vaadin-label style-name="tiny" height-full plain-text :expand>
+       Último comentario: 
+     </vaadin-label>
+     <vaadin-label style-name="tiny" height-full plain-text _id="label_tema_ultimo_usuario" :expand>
+       [usuario] 
+     </vaadin-label>
+     <vaadin-label style-name="tiny" height-full plain-text _id="label_tema_tiempo" :expand>
+       Hace [x] tiempo 
+     </vaadin-label>
+    </vaadin-vertical-layout>
+   </vaadin-horizontal-layout>
+  </vaadin-horizontal-layout>
+ </body>
+</html>

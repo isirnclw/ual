@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-horizontal-layout id="Margen superior" size-full _id="registrarse_margen_superior" :middle :center :expand></vaadin-horizontal-layout>
+   <vaadin-horizontal-layout spacing="false" id="Mitad" size-full _id="registrarse_mitad" :expand="9">
+    <vaadin-vertical-layout id="Margen izquierdo" :expand="36"></vaadin-vertical-layout>
+    <vaadin-vertical-layout spacing="false" id="Central" size-full margin="false" :middle :center :expand="28">
+     <vaadin-label width="98%" plain-text :center :expand="0.5">
+       Registro 
+     </vaadin-label>
+     <vaadin-label width="98%" plain-text>
+       Correo electrónico 
+     </vaadin-label>
+     <vaadin-text-field height-full _id="text_registrarse_correo" :expand="0.3"></vaadin-text-field>
+     <vaadin-label width="98%" plain-text :expand="0.5">
+       Usuario 
+     </vaadin-label>
+     <vaadin-horizontal-layout height-full :expand="0.3">
+      <vaadin-text-field width="100px" height-full _id="text_registrarse_usuario"></vaadin-text-field>
+      <vaadin-image width="200%" height="200%"></vaadin-image>
+     </vaadin-horizontal-layout>
+     <vaadin-label width="98%" plain-text :expand="0.5">
+       Contraseña 
+     </vaadin-label>
+     <vaadin-password-field height-full _id="text_registrarse_contraseña" :expand="0.3"></vaadin-password-field>
+     <vaadin-label width="98%" plain-text :expand="0.5">
+       Repetir contraseña 
+     </vaadin-label>
+     <vaadin-password-field height-full _id="text_registrarse_contraseña2" :expand="0.3"></vaadin-password-field>
+     <vaadin-label width="98%" plain-text :expand="0.5">
+       Nombre completo 
+     </vaadin-label>
+     <vaadin-text-field height-full _id="text_registrarse_nombre" :expand="0.3"></vaadin-text-field>
+     <vaadin-label width="98%" plain-text :expand="0.5">
+       Cuentanos mas sobre ti 
+     </vaadin-label>
+     <vaadin-text-area height-full _id="text_registrarse_descripcion" :expand></vaadin-text-area>
+     <vaadin-label id="Placeholder" plain-text :expand></vaadin-label>
+     <vaadin-horizontal-layout spacing="false" width-full :expand="0.5">
+      <vaadin-button size-full plain-text _id="boton_registro_atras">
+        Cancelar 
+      </vaadin-button>
+      <vaadin-button width-full plain-text _id="boton_registro_aceptar">
+        Registrarse 
+      </vaadin-button>
+     </vaadin-horizontal-layout>
+    </vaadin-vertical-layout>
+    <vaadin-vertical-layout id="Margen derecho" :expand="36"></vaadin-vertical-layout>
+   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout id="Margen inferior" size-full _id="registrarse_margen_inferior" :expand></vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

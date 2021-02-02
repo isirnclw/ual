@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-horizontal-layout id="Margen superior" size-full _id="crear_tema_sup" :middle :center :expand></vaadin-horizontal-layout>
+   <vaadin-vertical-layout primary-style-name="v-panel" spacing="false" margin="false" _id="crear_tema_mid" :middle :center>
+    <vaadin-panel primary-style-name="header-panel" :middle :center :expand>
+     <vaadin-label primary-style-name="header-label" width-full plain-text>
+       Crear un nuevo tema 
+     </vaadin-label>
+    </vaadin-panel>
+    <vaadin-vertical-layout size-full :middle :center :expand>
+     <vaadin-horizontal-layout width-full>
+      <vaadin-label width-full plain-text :expand>
+        Nombre 
+      </vaadin-label>
+      <vaadin-label width-full plain-text :expand>
+        Visibilidad 
+      </vaadin-label>
+     </vaadin-horizontal-layout>
+     <vaadin-horizontal-layout size-full :middle :center>
+      <vaadin-text-field size-full _id="text_crear_tema_nombre" :expand></vaadin-text-field>
+      <vaadin-native-select empty-selection-allowed="false" id="Selector de visibilidad" size-full data-item-type="java.lang.String" _id="selector_crear_tema_visibilidad" :expand>
+       <option item="Público">Público</option>
+       <option item="Privado">Privado</option>
+      </vaadin-native-select>
+     </vaadin-horizontal-layout>
+     <vaadin-label width-full plain-text>
+       Descripcion 
+     </vaadin-label>
+     <vaadin-text-area size-full _id="text_crear_tema_descripcion"></vaadin-text-area>
+     <vaadin-label width-full plain-text>
+       Icono 
+     </vaadin-label>
+     <vaadin-horizontal-layout id="Iconos" :expand>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e780" width="50px" height="38px" plain-text _id="boton_crear_tema_icono1"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e75b" width="50px" plain-text _id="boton_crear_tema_icono2" :expand></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e78e" width="50px" plain-text _id="boton_crear_tema_icono3" :expand></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e7fa" width="50px" plain-text _id="boton_crear_tema_icono4" :expand></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e7db" width="50px" plain-text _id="boton_crear_tema_icono5" :expand></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e7bb" width="50px" plain-text _id="boton_crear_tema_icono6" :expand></vaadin-button>
+     </vaadin-horizontal-layout>
+    </vaadin-vertical-layout>
+    <vaadin-horizontal-layout spacing="false" id="Buttonera" width-full :bottom :center :expand>
+     <vaadin-button id="CancelButton" size-full plain-text _id="boton_crear_tema_cancelar" :expand>
+       Cancelar 
+     </vaadin-button>
+     <vaadin-button id="AcceptButton" size-full plain-text _id="boton_crear_tema_aceptar" :expand>
+       Crear 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+   <vaadin-horizontal-layout id="Margen inferior" size-full _id="crear_tema_inf" :expand></vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

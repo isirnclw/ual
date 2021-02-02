@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+  html,body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto", sans-serif
+  }
+  
+  h2{
+    text-align:center;
+  }
+  
+  *:focus {
+    outline: none;
+  }
+
+  .modal-content {
+    margin: 30 auto 0 auto;
+    width: 100%; 
+    height: 55%;
+  }
+
+  .animate1 {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  .animate2 {
+   -webkit-animation: animatezoom 0.8s;
+   animation: animatezoom 0.8s
+ }
+
+ .animate3 {
+   -webkit-animation: animatezoom 1s;
+   animation: animatezoom 1s
+ }
+
+ .animate4 {
+   -webkit-animation: animatezoom 1.2s;
+   animation: animatezoom 1.2s
+ }
+
+ .button {
+  background-color: #009688;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 8px 80px;
+  text-align: center;
+  font-size: 16px;
+  margin: 40px 20px;
+  opacity: .8;
+  transition: .2s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+</style>
+
+<body style="background-size: cover;" background="#AAA" class="w3-light-grey">
+
+<!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1300px;"
+
+  <!-- The Grid -->
+  <div style="max-width:1400px; opacity:0.9" class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-twothird animate1">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+          </div>
+        </div>
+        <div class="w3-container">
+          <h2 class="w3-text-grey w3-padding-16">Panel de miembros</h2>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Felipe Antonio Cano Galera</b></p>
+          <div class="modal-content  animate1">
+            <a style="text-decoration:none" href="miperfil.html"><button class="button" type="button">Ver perfil</button></a>
+          </div>
+          
+          <br>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Ismael Cruz Bello</b></p>
+          <div class="modal-content animate2">
+            <a style="text-decoration:none" href="superfil.html"><button class="button" type="button">Ver perfil</button></a>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-third">
+      <div class="w3-container w3-card-2 w3-white animate3">
+        <h2 class="w3-text-grey w3-padding-16">Sobre nosotros</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Grupo</b></h5>
+          <h6 class="w3-text-teal">D100</h6>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

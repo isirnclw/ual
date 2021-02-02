@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full margin="false">
+   <vaadin-vertical-layout spacing="false" id="Perfil" size-full margin="false">
+    <vaadin-horizontal-layout id="Informacion_de_usuario" width-full margin _id="perfil_info">
+     <vaadin-image width="64px" height="64px" alt="[Imagen]" _id="image_perfil" :right></vaadin-image>
+     <vaadin-vertical-layout spacing="false" margin="false" :expand>
+      <vaadin-label plain-text _id="label_perfil_usuario" :middle :expand>
+        [Usuario] 
+      </vaadin-label>
+      <vaadin-label plain-text _id="label_perfil_descripcion" :expand="3">
+        [Descripcion de perfil del usuario] 
+      </vaadin-label>
+     </vaadin-vertical-layout>
+     <vaadin-vertical-layout spacing="false" size-auto margin="false">
+      <vaadin-button icon="fonticon://Vaadin-Icons/e6f7" width="48px" height="28px" plain-text _id="boton_perfil_restringir"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e61d" width="48px" height="28px" plain-text _id="boton_perfil_amigo"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e707" width="48px" height="28px" plain-text _id="boton_perfil_notificar"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e6e9" width="48px" height="28px" plain-text _id="boton_perfil_ascender"></vaadin-button>
+     </vaadin-vertical-layout>
+    </vaadin-horizontal-layout>
+    <vaadin-tab-sheet id="Botones de perfil propio" size-full _id="tab_perfil_usuario" :expand>
+     <tab caption="Amigos" selected>
+      <vaadin-grid-layout width-full margin _id="grid_perfil_amigos">
+       <row>
+        <column></column>
+        <column></column>
+        <column></column>
+        <column></column>
+        <column></column>
+        <column></column>
+        <column></column>
+        <column></column>
+        <column></column>
+        <column></column>
+       </row>
+      </vaadin-grid-layout>
+     </tab>
+     <tab caption="Contribuciones">
+      <vaadin-grid-layout width-full _id="grid_perfil_contribuciones"></vaadin-grid-layout>
+     </tab>
+     <tab caption="Modificar perfil">
+      <vaadin-vertical-layout _id="grid_perfil_modificar">
+       <vaadin-text-field placeholder="Nombre completo" width-full _id="text_nombre"></vaadin-text-field>
+       <vaadin-text-area placeholder="Descripción" width-full _id="text_descripcion"></vaadin-text-area>
+      </vaadin-vertical-layout>
+     </tab>
+    </vaadin-tab-sheet>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

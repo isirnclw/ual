@@ -1,0 +1,192 @@
+﻿<Page
+    x:Class="Odin.Views.RequisitoListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:Odin.Models"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <CommandBar
+            Margin="40,0,0,0"
+            Background="Transparent"
+            OverflowButtonVisibility="Collapsed">
+            <CommandBar.Content>
+                <TextBlock
+                    Margin="4,4,0,0"
+                    FontSize="20"
+                    Text="Lista de requisitos" />
+            </CommandBar.Content>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="AddBtn" Icon="Add" />
+                <AppBarSeparator />
+                <AppBarButton x:Name="SearchBtn" Icon="Find" />
+                <AppBarButton x:Name="ResetBtn" Icon="Refresh" />
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+
+    <Grid Background="{StaticResource Layer}">
+        <controls:DataGrid
+            x:Name="dataGrid"
+            Margin="20,20,0,20"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            AreRowDetailsFrozen="False"
+            AreRowGroupHeadersFrozen="True"
+            AutoGenerateColumns="False"
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            CanUserSortColumns="True"
+            ColumnHeaderHeight="32"
+            FrozenColumnCount="0"
+            GridLinesVisibility="Horizontal"
+            HeadersVisibility="Column"
+            HorizontalScrollBarVisibility="Visible"
+            IsReadOnly="False"
+            MaxColumnWidth="400"
+            RowDetailsVisibilityMode="VisibleWhenSelected"
+            RowGroupHeaderPropertyNameAlternative="Range"
+            SelectionChanged="ActualizarReq"
+            SelectionMode="Single"
+            VerticalScrollBarVisibility="Visible">
+            <controls:DataGrid.RowDetailsTemplate>
+                <DataTemplate x:DataType="models:Requisito">
+                    <Grid Padding="8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button
+                                Width="40"
+                                Height="40"
+                                Margin="14,0"
+                                Background="Transparent"
+                                Click="AgregarRec"
+                                Foreground="{StaticResource Accent}">
+                                <SymbolIcon Symbol="Add" />
+                            </Button>
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Recursos" />
+                        </StackPanel>
+                        <Grid BorderBrush="{StaticResource Elevation}" BorderThickness="3,3,1.5,1.5" />
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <Button
+                                Width="40"
+                                Height="40"
+                                Margin="14,0"
+                                Background="Transparent"
+                                Click="AgregarReq"
+                                Foreground="{StaticResource Accent}">
+                                <SymbolIcon Symbol="Add" />
+                            </Button>
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Text="Dependencias" />
+                        </StackPanel>
+
+                        <Grid
+                            Grid.Column="1"
+                            BorderBrush="{StaticResource Elevation}"
+                            BorderThickness="1.5,3,3,1.5" />
+
+                        <ListView
+                            Grid.Row="1"
+                            MinHeight="35"
+                            BorderBrush="{StaticResource Elevation}"
+                            BorderThickness="3,1.5,1.5,3"
+                            ItemsSource="{x:Bind Recursos, Mode=OneWay}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="models:Recurso">
+                                    <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                                        <Button
+                                            Width="40"
+                                            Height="40"
+                                            Margin="0,0,12,0"
+                                            Background="Transparent"
+                                            Click="EliminarRec"
+                                            Foreground="IndianRed"
+                                            Tag="{x:Bind Id}">
+                                            <SymbolIcon Symbol="Cancel" />
+                                        </Button>
+                                        <TextBlock VerticalAlignment="Center" Text="{x:Bind Tipo}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <ListView
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            MinHeight="35"
+                            BorderBrush="{StaticResource Elevation}"
+                            BorderThickness="1.5,1.5,3,3"
+                            ItemsSource="{x:Bind Relaciones, Mode=OneWay}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="models:Requisito">
+                                    <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                                        <Button
+                                            Width="40"
+                                            Height="40"
+                                            Margin="0,0,12,0"
+                                            Background="Transparent"
+                                            Click="EliminarReq"
+                                            Foreground="IndianRed"
+                                            Tag="{x:Bind Id}">
+                                            <SymbolIcon Symbol="Cancel" />
+                                        </Button>
+                                        <TextBlock VerticalAlignment="Center" Text="{x:Bind Nombre}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </controls:DataGrid.RowDetailsTemplate>
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn
+                    Binding="{Binding Id}"
+                    Header="Identificador"
+                    IsReadOnly="True"
+                    Tag="Id" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Nombre}"
+                    Header="Nombre"
+                    Tag="Nombre" />
+                <controls:DataGridComboBoxColumn
+                    Binding="{Binding Estado}"
+                    Header="Estado"
+                    ItemsSource="{x:Bind Estados}"
+                    Tag="Estado" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Esfuerzo}"
+                    Header="Esfuerzo"
+                    Tag="Esfuerzo" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Riesgo}"
+                    Header="Riesgo"
+                    Tag="Riesgo" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Exito}"
+                    Header="Éxito (%)"
+                    Tag="Exito" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Satisfaccion}"
+                    Header="Satisfacción"
+                    IsReadOnly="True"
+                    Tag="Satisfaccion" />
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+    </Grid>
+</Page>

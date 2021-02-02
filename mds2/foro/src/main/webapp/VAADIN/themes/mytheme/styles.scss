@@ -1,0 +1,226 @@
+@import "mytheme.scss";
+@import "addons.scss";
+
+// This file prefixes all rules with the theme name to avoid causing conflicts with other themes.
+// The actual styles should be defined in mytheme.scss
+
+.mytheme {
+    @include addons;
+    @include mytheme;
+}
+
+#HeaderButton {
+    color: #ac6c7e;
+    margin-left: -20px;
+}
+
+#Buttonera {
+    border-top: 1px solid #ddd;
+    color: #ac6c7e;
+    height: 45px !important;
+}
+
+#CancelButton {
+    border-radius: 0px 0px 0px 4px;
+    background: #fff6f6;
+    border: none;
+    height: 45px !important;
+    color: #ac6c7e;
+}
+
+#MidButton {
+    border-radius: 0px;
+    background: #fff2f2;
+    border: none;
+    height: 45px !important;
+    color: #ac6c7e;
+}
+
+#AcceptButton {
+    border-radius: 0px 0px 4px 0px;
+    background: #fee;
+    border: none;
+    height: 45px !important;
+    color: #ac6c7e;
+}
+
+#Panel {
+    position: relative;
+    background-color: #fffdfd;
+    box-shadow: 0px 0px 10px #666;
+}
+
+.v-link {
+    text-decoration: none !important;
+    color: #ac6c7e !important;
+}
+
+.mytheme .v-horizontallayout .h-panel {
+    position: relative;
+    background-color: #fffdfd;
+    box-shadow: 0px 0px 10px #666;
+    z-index: 1;
+}
+
+.mytheme .v-verticallayout .v-panel {
+    position: relative;
+    background-color: #fffdfd;
+    box-shadow: 0px 0px 10px #666;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.mytheme .v-verticallayout .header-panel {
+    position: relative;
+    background-color: #fff6f6;
+    z-index: 1;
+    height: 90px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0px 0px;
+    max-width: 700px;
+}
+
+.mytheme .header-label {
+    font-weight: bolder;
+    font-size: 24px;
+    color: #ac6c7e;
+    max-width: 80%;
+    margin: 20px 0px 0px 20px;
+}
+
+.mytheme .v-button.v-disabled {
+    opacity: 0.5;
+    color: #d1adb8;
+    border-radius: 0px;
+    font-size: 30px;
+}
+
+.background {
+    background: url("HeaderBack.jpg") !important;
+    color: #fff;
+    position: relative;
+    background-color: #fffdfd;
+    box-shadow: 0px 0px 10px #666;
+    z-index: 2;
+}
+
+.mytheme .v-tree8-row-selected > .v-tree8-cell {
+    background-color: #a86c7c !important;
+    background-image: none;
+    color: #fff;
+    text-shadow: 0px 2px 0px rgba(0,0,0,0.5);
+}
+
+.mytheme .header-title {
+    color: #ac6c7e;
+    font-weight: bolder;
+    margin-top: 11px;
+    margin-left: 16px;
+}
+
+.mytheme .v-tree8-body .v-tree8-row {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+
+.mytheme .v-tree8-row > td:first-child, .mytheme .v-tree8-editor-cells > div:first-child {
+    border-left: none;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.mytheme .v-button.v-disabled {
+    opacity: 0.5;
+    color: #d1adb8;
+    border-radius: 0px;
+    font-size: 30px;
+}
+
+.mytheme .v-tabsheet-tabitemcell .v-caption:hover {
+    color: #ac6c7e;
+}
+
+.mytheme .v-tabsheet-tabcontainer {
+    position: relative;
+    box-sizing: border-box;
+    background: #fff6f6;
+}
+
+.mytheme .v-tabsheet-tabitemcell .v-caption {
+    margin-left: 19px;
+    padding: 5px 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    line-height: 37px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #696969;
+    width: auto !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    -webkit-transition: border-bottom 200ms, color 200ms;
+    -moz-transition: border-bottom 200ms, color 200ms;
+    transition: border-bottom 200ms, color 200ms;
+}
+
+.v-tabsheet-tabcontainer td {
+    display: inline-block;
+    padding-top: 2% 2% 0px 2%;
+}
+
+.mytheme .v-tabsheet-deco {
+    height: 20px !important;
+    width: 20px !important;
+    box-sizing: border-box;
+    border: 2px solid #ac6c7e;
+    border-top-color: #ac6c7e;
+    border-right-color: #ac6c7e;
+    border-radius: 100%;
+    -webkit-animation: v-rotate-360 500ms infinite linear;
+    -moz-animation: v-rotate-360 500ms infinite linear;
+    animation: v-rotate-360 500ms infinite linear;
+    pointer-events: none;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    bottom: 50%;
+    margin-bottom: -29px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.mytheme .header-label {
+    font-weight: bolder;
+    font-size: 24px;
+    color: #ac6c7e;
+    max-width: 80%;
+    margin: 23px 0px 0px 23px;
+}
+
+.mytheme .v-tabsheet-tabitemcell:focus .v-caption {
+    color: #ac6c7e;
+}
+
+.mytheme .v-tabsheet-tabitemcell .v-tabsheet-tabitem-selected .v-caption.v-caption {
+    border-bottom-color: #ac6c7e;
+    color: #ac6c7e;
+}
+
+.mytheme .v-tabsheet-tabitemcell .v-tabsheet-caption-close:hover {
+    background: rgba(0, 0, 0, 0.03);
+    color: #ac6c7e;
+}
+
+.mytheme .v-tabsheet-tabitemcell .v-tabsheet-caption-close:active {
+    background: #ac6c7e;
+    color: #fcc;
+}
+
+.mytheme .v-tabsheet-scroller button:active {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    color: #ac6c7e;
+}

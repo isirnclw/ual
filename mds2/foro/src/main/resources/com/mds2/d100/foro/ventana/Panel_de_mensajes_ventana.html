@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" id="Panel_de_mensajes" size-full margin="false">
+   <vaadin-horizontal-layout primary-style-name="v-panel" id="Titulo_con_botones" width-full margin-left margin-right>
+    <vaadin-label style-name="h3" plain-text _id="label_panel_de_mensajes_titulo" :middle :expand="7">
+      [Titulo del tema aqui] 
+    </vaadin-label>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e7d3" plain-text _id="panel_de_mensajes_mod" :middle :center :expand></vaadin-button>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e6dc" plain-text _id="panel_de_mensajes_like" :middle :center :expand></vaadin-button>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e707" id="reportar" plain-text _id="panel_de_mensajes_report" :middle :center :expand></vaadin-button>
+   </vaadin-horizontal-layout>
+   <vaadin-vertical-layout style-name="scroll-divider" spacing="false" size-full margin-top="false" margin-bottom="false" :middle :center :expand>
+    <vaadin-vertical-layout spacing="false" id="Espacio_del_propietario" margin-left="false" margin-right="false" margin-bottom="false">
+     <vaadin-horizontal-layout id="Informacion de usuario" height="64px">
+      <vaadin-image id="Imagen de usuario" width="48px" height="48px" _id="image_panel_de_mensajes"></vaadin-image>
+      <vaadin-vertical-layout spacing="false" width-auto height="64px" margin="false">
+       <vaadin-label plain-text _id="label_panel_de_mensajes_nombre">
+         [Nombre] 
+       </vaadin-label>
+       <vaadin-label style-name="small" plain-text _id="label_panel_de_mensajes_fecha">
+         [Fecha de publicacion] 
+       </vaadin-label>
+      </vaadin-vertical-layout>
+     </vaadin-horizontal-layout>
+     <vaadin-horizontal-layout spacing="false" height-full :expand>
+      <vaadin-label plain-text _id="label_panel_de_mensajes_contenido">
+        [Contenido del mensaje propietario] 
+      </vaadin-label>
+     </vaadin-horizontal-layout>
+    </vaadin-vertical-layout>
+    <vaadin-grid-layout id="Lista de respuestas" size-full margin-bottom _id="grid_panel_mensajes" :expand></vaadin-grid-layout>
+   </vaadin-vertical-layout>
+   <vaadin-horizontal-layout primary-style-name="v-panel" spacing="false" width-full height="36px" _id="panel_enviar_mensaje">
+    <vaadin-text-field size-full _id="text_mensaje" :expand></vaadin-text-field>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e72d" size-full plain-text _id="boton_mensaje_multimedia" :expand="0.15"></vaadin-button>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e6b9" size-full plain-text _id="boton_mensaje_enviar" :expand="0.15"></vaadin-button>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

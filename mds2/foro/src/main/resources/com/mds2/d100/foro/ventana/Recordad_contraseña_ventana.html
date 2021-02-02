@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-horizontal-layout id="Margen superior" size-full _id="recordar_superior" :middle :center :expand></vaadin-horizontal-layout>
+   <vaadin-horizontal-layout spacing="false" id="Mitad" size-full _id="recordar_mitad" :expand="3">
+    <vaadin-vertical-layout id="Margen izquierdo" :expand="36"></vaadin-vertical-layout>
+    <vaadin-vertical-layout spacing="false" id="Central" size-full margin="false" :middle :center :expand="28">
+     <vaadin-label width="98%" plain-text :middle :center :expand="1.5">
+       Recordad contraseña 
+     </vaadin-label>
+     <vaadin-label width="98%" plain-text :middle :center :expand>
+       Correo electronico 
+     </vaadin-label>
+     <vaadin-text-field height-full _id="text_recordar_contraseña_correo" :expand="0.5"></vaadin-text-field>
+     <vaadin-label visible="false" plain-text _id="label_correo_error">
+       Correo incorrecto 
+     </vaadin-label>
+     <vaadin-label width="98%" plain-text :middle :center :expand>
+       Usuario 
+     </vaadin-label>
+     <vaadin-text-field height-full _id="text_recordar_contraseña_usuario" :expand="0.5"></vaadin-text-field>
+     <vaadin-label visible="false" plain-text _id="label_error_usuario">
+       Usuario incorrecto 
+     </vaadin-label>
+     <vaadin-label visible="false" plain-text _id="label_correo_enviado">
+       Se ha enviado un correo de confirmacion 
+     </vaadin-label>
+     <vaadin-label id="Placeholder" plain-text :expand></vaadin-label>
+     <vaadin-horizontal-layout spacing="false" width-full :expand="0.5">
+      <vaadin-button size-full plain-text _id="boton_retroceder_recordar">
+        Atrás 
+      </vaadin-button>
+      <vaadin-button width-full plain-text _id="boton_recordar_aceptar">
+        Recordar 
+      </vaadin-button>
+     </vaadin-horizontal-layout>
+    </vaadin-vertical-layout>
+    <vaadin-vertical-layout id="Margen derecho" :expand="36"></vaadin-vertical-layout>
+   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout id="Margen inferior" size-full _id="recordar_inferior" :expand></vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

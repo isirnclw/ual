@@ -1,0 +1,159 @@
+﻿<Page
+    x:Class="Odin.Views.VersionListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:Odin.Models"
+    xmlns:viewmodels="using:Odin.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:VersionViewModel}"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <CommandBar
+            Margin="40,0,0,0"
+            Background="Transparent"
+            OverflowButtonVisibility="Collapsed">
+            <CommandBar.Content>
+                <TextBlock
+                    Margin="4,4,0,0"
+                    FontSize="20"
+                    Text="Lista de versiones" />
+            </CommandBar.Content>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="AddBtn" Icon="Add" />
+                <AppBarSeparator />
+                <AppBarButton x:Name="SearchBtn" Icon="Find" />
+                <AppBarButton x:Name="ResetBtn" Icon="Refresh" />
+                <AppBarSeparator />
+                <AppBarButton
+                    x:Name="GenBtn"
+                    Icon="Play"
+                    ToolTipService.ToolTip="Generar nueva versión" />
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+
+    <Grid Background="{StaticResource Layer}">
+        <controls:DataGrid
+            x:Name="dataGrid"
+            Margin="20,20,0,20"
+            AreRowDetailsFrozen="False"
+            AreRowGroupHeadersFrozen="True"
+            AutoGenerateColumns="False"
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            CanUserSortColumns="True"
+            ColumnHeaderHeight="32"
+            FrozenColumnCount="0"
+            GridLinesVisibility="Horizontal"
+            HeadersVisibility="Column"
+            HorizontalScrollBarVisibility="Visible"
+            IsReadOnly="False"
+            MaxColumnWidth="400"
+            RowDetailsVisibilityMode="VisibleWhenSelected"
+            RowGroupHeaderPropertyNameAlternative="Range"
+            SelectionMode="Single"
+            VerticalScrollBarVisibility="Visible">
+            <controls:DataGrid.RowDetailsTemplate>
+                <DataTemplate x:DataType="models:Version">
+                    <Grid Padding="8">
+                        <ListView
+                            BorderBrush="{StaticResource Elevation}"
+                            BorderThickness="3"
+                            ItemsSource="{x:Bind Requisitos, Mode=OneWay}"
+                            SelectionChanged="ReqDialog">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="models:Requisito">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="32" />
+                                            <ColumnDefinition Width="2" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30" />
+                                            <RowDefinition Height="30" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.RowSpan="2"
+                                            Margin="0,0,14,0"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Text="{x:Bind Id}" />
+                                        <Grid
+                                            Grid.RowSpan="2"
+                                            Grid.Column="1"
+                                            Width="2"
+                                            Margin="0,2"
+                                            Background="{StaticResource Accent}" />
+                                        <TextBlock Grid.Column="2" Margin="16,8,16,0">
+                                            <Run Text="Nombre:" />
+                                            <Run Text="{x:Bind Nombre}" />
+                                        </TextBlock>
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            Grid.Column="2"
+                                            Margin="16,2">
+                                            <Run Text="Fecha de inicio:" />
+                                            <Run Text="{x:Bind Inicio.Date}" />
+                                        </TextBlock>
+                                        <TextBlock Grid.Column="3" Margin="16,8,16,0">
+                                            <Run Text="Esfuerzo:" />
+                                            <Run Text="{x:Bind Esfuerzo}" />
+                                        </TextBlock>
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            Grid.Column="3"
+                                            Margin="16,2">
+                                            <Run Text="Fecha de fin:" />
+                                            <Run Text="{x:Bind Fin.Date}" />
+                                        </TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </DataTemplate>
+            </controls:DataGrid.RowDetailsTemplate>
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn
+                    Binding="{Binding Id}"
+                    Header="Identificador"
+                    IsReadOnly="True"
+                    Tag="Id" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Nombre}"
+                    Header="Numero de versión"
+                    Tag="Numero" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Inicio}"
+                    Header="Fecha de inicio"
+                    IsReadOnly="True"
+                    Tag="Inicio" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Fin}"
+                    Header="Fecha de fin"
+                    IsReadOnly="True"
+                    Tag="Fin" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding Satisfaccion}"
+                    Header="Satisfacción"
+                    Tag="Satisfacción" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding ActEsfuerzo}"
+                    Header="Esfuerzo actual"
+                    IsReadOnly="True"
+                    Tag="Esfuerzo actual" />
+                <controls:DataGridTextColumn
+                    Binding="{Binding MaxEsfuerzo}"
+                    Header="Esfuerzo máximo"
+                    Tag="Esfuerzo maximo" />
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+    </Grid>
+</Page>

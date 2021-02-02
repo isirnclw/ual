@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-horizontal-layout id="Margen superior" size-full _id="mod_tema_sup" :middle :center :expand></vaadin-horizontal-layout>
+   <vaadin-vertical-layout primary-style-name="v-panel" spacing="false" id="Central" margin="false" _id="mod_tema_mid" :middle :center>
+    <vaadin-panel primary-style-name="header-panel" height="90px">
+     <vaadin-horizontal-layout spacing="false" width-full height="89px">
+      <vaadin-label primary-style-name="header-label" width-full plain-text :expand="5">
+        Modificar tema 
+      </vaadin-label>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e80b" id="HeaderButton" width="50px" height="50px" plain-text _id="boton_modificar_tema_eliminar" :middle :center :expand></vaadin-button>
+     </vaadin-horizontal-layout>
+    </vaadin-panel>
+    <vaadin-vertical-layout size-full :middle :center :expand>
+     <vaadin-horizontal-layout width-full>
+      <vaadin-label width-full plain-text>
+        Nombre 
+      </vaadin-label>
+      <vaadin-label width-full plain-text>
+        Visibilidad 
+      </vaadin-label>
+     </vaadin-horizontal-layout>
+     <vaadin-horizontal-layout size-full>
+      <vaadin-text-field width-full _id="text_modificar_tema_nomobre"></vaadin-text-field>
+      <vaadin-native-select empty-selection-allowed="false" id="Selector de visibilidad" width-full data-item-type="java.lang.String" _id="select_modificar_tema_visibilidad">
+       <option item="Público">Público</option>
+       <option item="Privado">Privado</option>
+      </vaadin-native-select>
+     </vaadin-horizontal-layout>
+     <vaadin-label width-full plain-text>
+       Descripcion 
+     </vaadin-label>
+     <vaadin-text-area size-full _id="text_modificar_tema_descripcion" :expand></vaadin-text-area>
+     <vaadin-label width-full plain-text>
+       Icono 
+     </vaadin-label>
+     <vaadin-horizontal-layout id="Iconos" width-full>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e780" width="50px" plain-text _id="boton_modificar_tema_icono1"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e75b" width="50px" plain-text _id="boton_modificar_tema_icono2"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e78e" width="50px" plain-text _id="boton_modificar_tema_icono3"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e7fa" width="50px" plain-text _id="boton_modificar_tema_icon4"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e7db" width="50px" plain-text _id="boton_modificar_tema_icono5"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e7bb" width="50px" plain-text _id="boton_modificar_tema_icono6"></vaadin-button>
+     </vaadin-horizontal-layout>
+    </vaadin-vertical-layout>
+    <vaadin-horizontal-layout spacing="false" id="Buttonera" width-full>
+     <vaadin-button id="CancelButton" size-full plain-text _id="boton_modificar_tema_cancelar">
+       Cancelar 
+     </vaadin-button>
+     <vaadin-button id="AcceptButton" width-full plain-text _id="boton_modificar_tema_icono_aceptar">
+       Crear 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+   <vaadin-horizontal-layout id="Margen inferior" size-full _id="mod_tema_inf" :bottom :right :expand></vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

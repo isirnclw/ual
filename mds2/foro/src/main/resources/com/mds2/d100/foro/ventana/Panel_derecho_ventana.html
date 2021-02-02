@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full margin="false">
+   <vaadin-horizontal-layout primary-style-name="h-panel" id="Panel_derecho" size-full>
+    <vaadin-vertical-layout visible="false" id="Panel_derecho_desconectado" size-full _id="panel_derecho_desconectado">
+     <vaadin-label responsive size-full plain-text :center>
+       Estás en modo desconectado, por lo que la lista de amigos esta desactivada 
+     </vaadin-label>
+    </vaadin-vertical-layout>
+    <vaadin-vertical-layout spacing="false" id="Panel_derecho_conectado" size-full margin="false" _id="panel_derecho_conectado">
+     <vaadin-panel height="49px">
+      <vaadin-label primary-style-name="header-title" id="Cabecera_lista_amigos" plain-text>
+        Lista de amigos 
+      </vaadin-label>
+     </vaadin-panel>
+     <vaadin-grid-layout id="Panel_derecho_lista_de_amigos" width-full _id="grid_panel_derecho_amigos" :center :expand>
+      <row>
+       <column></column>
+       <column></column>
+       <column></column>
+       <column></column>
+      </row>
+     </vaadin-grid-layout>
+    </vaadin-vertical-layout>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

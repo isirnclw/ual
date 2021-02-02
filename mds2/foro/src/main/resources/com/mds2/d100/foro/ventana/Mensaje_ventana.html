@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" margin="false">
+   <vaadin-horizontal-layout>
+    <vaadin-button style-name="borderless-colored" height="64px" plain-text _id="boton_mensaje_foto_perfil"></vaadin-button>
+    <vaadin-label plain-text _id="label_mensaje_nombre" :middle>
+      [Nombre] 
+    </vaadin-label>
+   </vaadin-horizontal-layout>
+   <vaadin-label plain-text _id="label_mensaje_descripcion">
+     [Descripcion] 
+   </vaadin-label>
+   <vaadin-horizontal-layout width-full height="36px" _id="boton_mensaje_responder1">
+    <vaadin-button icon="fonticon://Vaadin-Icons/e622" style-name="icon-only" width="64px" height="28px" plain-text _id="boton_mensaje_responder" :middle :center></vaadin-button>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e80b" width="64px" height="28px" plain-text _id="borrar_mensaje" :middle :center></vaadin-button>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e748" width="64px" height="28px" plain-text _id="boton_reportar_mensaje" :middle :center></vaadin-button>
+    <vaadin-button icon="fonticon://Vaadin-Icons/e6db" width="64px" height="28px" plain-text _id="boton_gusta_mensaje" :middle :center></vaadin-button>
+    <vaadin-label style-name="tiny" plain-text _id="label_mensaje_fecha" :middle :right :expand="10">
+      Hace [X] horas 
+    </vaadin-label>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

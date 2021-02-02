@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-vertical-layout primary-style-name="v-panel" spacing="false" _id="funciones_administrador_botones" :middle :center>
+    <vaadin-vertical-layout id="Central" margin="false" _id="funciones_comunes_botones" :middle :center>
+     <vaadin-button style-name="borderless" height-full plain-text _id="boton_mi_perfil">
+       🚩 Mi perfil 
+     </vaadin-button>
+     <vaadin-button style-name="borderless" height-full plain-text _id="boton_mis_notificaciones">
+       📣 Mis notificaciones 
+     </vaadin-button>
+     <vaadin-button style-name="borderless" plain-text _id="boton_cerrar_sesion">
+       👋 Cerrar sesión 
+     </vaadin-button>
+     <vaadin-label primary-style-name="v-link" width-full plain-text>
+       Elige tu tema 
+     </vaadin-label>
+     <vaadin-horizontal-layout width-full>
+      <vaadin-button style-name="borderless" size-full plain-text _id="boton_tema_rosa">
+        Rosa 
+      </vaadin-button>
+      <vaadin-button style-name="borderless" size-full plain-text _id="boton_tema_verde">
+        Verde 
+      </vaadin-button>
+      <vaadin-button style-name="borderless" size-full plain-text _id="boton_tema_naranja">
+        Naranja 
+      </vaadin-button>
+      <vaadin-button style-name="borderless" size-full plain-text _id="boton_tema_amarillo">
+        Amarillo 
+      </vaadin-button>
+     </vaadin-horizontal-layout>
+     <vaadin-vertical-layout spacing="false" margin="false" _id="funciones_admin">
+      <vaadin-button style-name="borderless" height-full plain-text _id="boton_usuarios_restringidos">
+        ⛔ Usuarios restringidos 
+      </vaadin-button>
+      <vaadin-button style-name="borderless" height-full plain-text _id="boton_crear_seccion">
+        📙 Crear sección 
+      </vaadin-button>
+      <vaadin-horizontal-layout width-full :expand>
+       <vaadin-label width-full plain-text :middle :center :expand>
+         Mensajes por perfil: 
+       </vaadin-label>
+       <vaadin-text-field width-full maxlength="3" value="7" _id="text_funciones_comunes_mensajes" :expand></vaadin-text-field>
+      </vaadin-horizontal-layout>
+     </vaadin-vertical-layout>
+    </vaadin-vertical-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

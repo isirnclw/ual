@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full margin="false">
+   <vaadin-horizontal-layout primary-style-name="background" id="Cabecera" size-full :expand>
+    <vaadin-button style-name="borderless" size-full plain-text _id="boton_logo" :middle :center :expand="20">
+      L O G O 
+    </vaadin-button>
+    <vaadin-vertical-layout spacing="false" size-auto margin="false" :middle :expand="55">
+     <vaadin-label id="Bienvenido" height-full plain-text>
+       Bienvenido 
+     </vaadin-label>
+    </vaadin-vertical-layout>
+    <vaadin-grid-layout visible="false" id="Cabecera_derecha_wrap" size-full _id="cabecera_usuario_nr" :middle :right :expand="25">
+     <row>
+      <column>
+       <vaadin-horizontal-layout id="Botones_unr" size-full>
+        <vaadin-vertical-layout spacing="false" size-full margin="false" :expand="2">
+         <vaadin-button primary-style-name="link" style-name="borderless small" width-full plain-text _id="boton_iniciar_sesion" :bottom :right :expand>
+           Iniciar sesión 
+         </vaadin-button>
+         <vaadin-button primary-style-name="link" style-name="borderless small" width-full height="25px" plain-text _id="boton_registrarse" :right :expand>
+           Registrarse 
+         </vaadin-button>
+        </vaadin-vertical-layout>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e80d" enabled="false" size-full plain-text :middle :center :expand="1.5"></vaadin-button>
+       </vaadin-horizontal-layout>
+      </column>
+     </row>
+    </vaadin-grid-layout>
+    <vaadin-grid-layout id="Cabecera_usuario_registrado" size-full _id="cabecera_usuario_r" :expand="25">
+     <row>
+      <column>
+       <vaadin-horizontal-layout spacing="false" size-full>
+        <vaadin-vertical-layout spacing="false" size-full margin="false" :expand="3">
+         <vaadin-label style-name="small" plain-text _id="label_cabecera_nombre" :bottom :expand>
+           [Nombre usuario] 
+         </vaadin-label>
+         <vaadin-label style-name="tiny" plain-text :expand>
+           · Conectado 
+         </vaadin-label>
+        </vaadin-vertical-layout>
+        <vaadin-button size-full plain-text _id="boton_funciones" :expand="1.5"></vaadin-button>
+       </vaadin-horizontal-layout>
+      </column>
+     </row>
+    </vaadin-grid-layout>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

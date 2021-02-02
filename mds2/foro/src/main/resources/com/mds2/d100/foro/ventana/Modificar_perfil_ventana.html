@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-horizontal-layout spacing="false" id="Margen superior" size-full _id="mod_perfil_sup" :middle :center :expand></vaadin-horizontal-layout>
+   <vaadin-vertical-layout primary-style-name="v-panel" spacing="false" id="Central" size-full margin="false" _id="mod_perfil_mid" :middle :center :expand="3">
+    <vaadin-horizontal-layout primary-style-name="v-header" size-full margin :middle :center :expand>
+     <vaadin-image size-full alt="[Imagen]" _id="image_modificar_perfil" :middle :center :expand></vaadin-image>
+     <vaadin-vertical-layout size-full margin="false" :expand="2">
+      <vaadin-label style-name="h3" width-full plain-text _id="label_modificar_perfil_nombre" :middle :center :expand>
+        [Nombre de usuario] 
+      </vaadin-label>
+      <vaadin-text-area placeholder="Lorem ipsum dolor sit amet..." size-full _id="text_modificar_perfil_descripcion" :center :expand="2"></vaadin-text-area>
+     </vaadin-vertical-layout>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout spacing="false" id="Buttonera" width-full :middle :center>
+     <vaadin-text-field id="CancelButton" size-full value="[Nombre usuario]" _id="text_modificar_perfil_nombre" :middle :center :expand></vaadin-text-field>
+     <vaadin-button id="MidButton" size-full plain-text _id="boton_modificar_perfil_eliminar" :expand>
+       Eliminar cuenta 
+     </vaadin-button>
+     <vaadin-button id="AcceptButton" size-full plain-text _id="boton_modificar_perfil_guardar" :expand>
+       Guardar cambios 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+   <vaadin-horizontal-layout spacing="false" id="Margen inferior" size-full _id="mod_perfil_inf" :expand></vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

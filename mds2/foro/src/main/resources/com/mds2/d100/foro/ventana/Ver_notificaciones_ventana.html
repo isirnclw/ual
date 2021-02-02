@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" id="Notificaciones" size-full margin="false">
+   <vaadin-horizontal-layout primary-style-name="h-panel" spacing="false" id="Panel" width-full height="48px">
+    <vaadin-horizontal-layout spacing="false" margin-left :middle :expand>
+     <vaadin-label width-full plain-text>
+       Centro de notificaciones 
+     </vaadin-label>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout margin-right :middle :right :expand>
+     <vaadin-label plain-text>
+       Notif. respuestas 
+     </vaadin-label>
+     <vaadin-check-box _id="check_ver_notificaciones_notificar"></vaadin-check-box>
+     <vaadin-label plain-text>
+       Enviar al correo 
+     </vaadin-label>
+     <vaadin-check-box _id="check_ver_notificaciones_enviar"></vaadin-check-box>
+    </vaadin-horizontal-layout>
+   </vaadin-horizontal-layout>
+   <vaadin-grid-layout id="Lista de notificaciones" size-full _id="grid_notificaciones" :expand></vaadin-grid-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

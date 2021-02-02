@@ -1,0 +1,132 @@
+﻿<ContentDialog
+    x:Class="Odin.Views.VersionDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:Odin.Models"
+    Title="Agregar versión"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    Style="{StaticResource Agregar}"
+    mc:Ignorable="d">
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" MinHeight="35" />
+                <RowDefinition Height="*" MinHeight="35" />
+                <RowDefinition Height="*" MinHeight="35" />
+                <RowDefinition Height="*" MinHeight="35" />
+                <RowDefinition Height="*" MinHeight="35" />
+                <RowDefinition Height="*" MinHeight="35" />
+                <RowDefinition Height="*" MinHeight="35" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                Margin="0,8">
+                <Run Text="Proyecto: " />
+                <Run Text="{x:Bind PNname}" />
+            </TextBlock>
+            <TextBlock
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="0,8,0,4"
+                Text="Nombre" />
+            <TextBox
+                x:Name="Nombre"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Margin="0,4,8,8"
+                Style="{StaticResource TextBox}" />
+            <Grid Grid.Row="3" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" MinHeight="35" />
+                    <RowDefinition Height="*" MinHeight="35" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,8,0,4"
+                    Text="Fecha de inicio" />
+                <DatePicker
+                    x:Name="FInicio"
+                    Grid.Row="1"
+                    Margin="0,4,8,8" />
+            </Grid>
+            <Grid Grid.Row="4" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" MinHeight="35" />
+                    <RowDefinition Height="*" MinHeight="35" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Grid.Row="0"
+                    Margin="0,8,0,4"
+                    Text="Fecha de finalización" />
+                <DatePicker
+                    x:Name="FFin"
+                    Grid.Row="1"
+                    Margin="0,4,8,8" />
+            </Grid>
+            <Grid Grid.Row="5" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" MinHeight="35" />
+                    <RowDefinition Height="*" MinHeight="35" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Grid.Row="0"
+                    Margin="0,8,0,4"
+                    Text="Esfuerzo máximo" />
+                <TextBox
+                    x:Name="Esfuerzo"
+                    Grid.Row="1"
+                    Margin="0,4,8,8"
+                    Style="{StaticResource TextBox}" />
+            </Grid>
+            <TextBlock
+                Grid.Row="6"
+                Margin="0,8"
+                Text="Requisitos" />
+            <ListView
+                x:Name="Requisitos"
+                Grid.Row="7"
+                d:Height="200"
+                ItemsSource="{x:Bind ReqItems}"
+                SelectionMode="Multiple">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Requisito">
+                        <TextBlock Text="{Binding Nombre}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <TextBlock
+                Grid.Row="6"
+                Grid.Column="1"
+                Margin="0,8"
+                Text="Recursos" />
+            <ListView
+                x:Name="Recursos"
+                Grid.Row="7"
+                Grid.Column="1"
+                d:Height="200"
+                ItemsSource="{x:Bind RecItems}"
+                SelectionMode="Multiple">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Recurso">
+                        <TextBlock Text="{Binding Tipo}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ScrollViewer>
+</ContentDialog>
